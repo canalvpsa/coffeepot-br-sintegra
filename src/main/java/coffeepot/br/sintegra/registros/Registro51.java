@@ -55,11 +55,11 @@ public class Registro51 {
 
     private Double valorIpi;
     private Double valorTotal;
-    private String serieDocumento;
+    private String serieDocumento; 
     private Date dataDocumento;
     private String cpfCnpj;
     private Integer cfop;
-    private Integer numeroDocumento;
+    private Long numeroDocumento;
     private String ie;
     private SituacaoDocumentoFiscal situacaoDocumento;
     private Double valorIsentas;
@@ -98,11 +98,11 @@ public class Registro51 {
         this.ie = ie;
     }
 
-    public Integer getNumeroDocumento() {
+    public Long getNumeroDocumento() {
         return numeroDocumento;
     }
 
-    public void setNumeroDocumento(Integer numeroDocumento) {
+    public void setNumeroDocumento(Long numeroDocumento) {
         this.numeroDocumento = numeroDocumento;
     }
 

@@ -60,8 +60,8 @@ public class Registro53 {
     private String serieDocumento;
     private Date dataDocumento;
     private String cnpj;
-    private Integer cfop;
-    private int numeroDocumento;
+    private Long cfop;
+    private Long numeroDocumento;
     private String ie;
     private SituacaoDocumentoFiscal situacaoDocumento;
     private String uf;
@@ -80,11 +80,11 @@ public class Registro53 {
         this.baseST = baseST;
     }
 
-    public Integer getCfop() {
+    public Long getCfop() {
         return cfop;
     }
 
-    public void setCfop(Integer cfop) {
+    public void setCfop(Long cfop) {
         this.cfop = cfop;
     }
 
@@ -144,11 +144,11 @@ public class Registro53 {
         this.modeloDocumento = modeloDocumento;
     }
 
-    public int getNumeroDocumento() {
+    public Long getNumeroDocumento() {
         return numeroDocumento;
     }
 
-    public void setNumeroDocumento(int numeroDocumento) {
+    public void setNumeroDocumento(Long numeroDocumento) {
         this.numeroDocumento = numeroDocumento;
     }
 

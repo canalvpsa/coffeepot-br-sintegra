@@ -32,18 +32,6 @@
                 <configuration>
                     <verbose>true</verbose>
                 </configuration>
-                <executions>
-                    <execution>
-                        <id>add-apache-headers</id>
-                        <goals>
-                            <goal>update-file-header</goal>
-                        </goals>
-                        <phase>process-sources</phase>
-                        <configuration>
-                            <licenseName>apache_v2</licenseName>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin> 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

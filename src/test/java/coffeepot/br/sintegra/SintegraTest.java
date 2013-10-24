@@ -24,6 +24,24 @@ package coffeepot.br.sintegra;
  */
 
 
+import java.io.BufferedWriter;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
+import java.io.Writer;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
 import coffeepot.br.sintegra.registros.Registro10;
 import coffeepot.br.sintegra.registros.Registro11;
 import coffeepot.br.sintegra.registros.Registro50;
@@ -40,24 +58,6 @@ import coffeepot.br.sintegra.tipos.FinalidadeArquivo;
 import coffeepot.br.sintegra.tipos.NaturezaOperacao;
 import coffeepot.br.sintegra.tipos.SituacaoDocumentoFiscal;
 import coffeepot.br.sintegra.writer.SintegraWriter;
-import java.io.BufferedWriter;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -154,7 +154,7 @@ public class SintegraTest {
         r51.setCpfCnpj("121+1515113,51");
         r51.setDataDocumento(r50.getDataDocumento());
         r51.setIe("adfdafadfd fadsf 5411616161 a61fd6 adf");
-        r51.setNumeroDocumento(999999);
+        r51.setNumeroDocumento(Long.valueOf("999999"));
         r51.setSerieDocumento("sssss");
         r51.setSituacaoDocumento(SituacaoDocumentoFiscal.CANCELADO);
         r51.setUf("UUU");
@@ -167,7 +167,7 @@ public class SintegraTest {
         r51.setCpfCnpj("121+1515113,51");
         r51.setDataDocumento(r50.getDataDocumento());
         r51.setIe("adfdafadfd fadsf 5411616161 a61fd6 adf");
-        r51.setNumeroDocumento(999999);
+        r51.setNumeroDocumento(Long.valueOf("999999"));
         r51.setSerieDocumento("sssss");
         r51.setSituacaoDocumento(SituacaoDocumentoFiscal.CANCELADO);
         r51.setUf("UUU");
@@ -177,13 +177,13 @@ public class SintegraTest {
 
         Registro53 r53 = new Registro53();
         r53.setBaseST(1111.99);
-        r53.setCfop(5101);
+        r53.setCfop(new Long(5101));
         r53.setCnpj("12-15161-ad541001");
         r53.setDataDocumento(new Date());
         r53.setEmitente(Emitente.PROPRIO);
         r53.setIe("IEIEIEIEIEIEIEIIEIE");
         r53.setModeloDocumento(DocumentoFiscal.NOTA_FISCAL_ELETRONICA);
-        r53.setNumeroDocumento(3333333);
+        r53.setNumeroDocumento(new Long(3333333));
         r53.setSerieDocumento("SSSSS");
         r53.setSituacaoDocumento(SituacaoDocumentoFiscal.INUTILIZADO);
         r53.setUf("ES");
