@@ -24,14 +24,14 @@ package coffeepot.br.sintegra.registros;
  */
 
 
+import java.util.Date;
+
 import coffeepot.bean.wr.anotation.Field;
 import coffeepot.bean.wr.anotation.Record;
 import coffeepot.bean.wr.typeHandler.DefaultStringHandler;
 import coffeepot.bean.wr.types.Align;
-import coffeepot.br.sintegra.tipos.DocumentoFiscal;
 import coffeepot.br.sintegra.tipos.Frete;
 import coffeepot.br.sintegra.tipos.SituacaoDocumentoFiscal;
-import java.util.Date;
 
 /**
  *
@@ -62,7 +62,7 @@ public class Registro70 {
     private String ie;
     private Date dataEmissaoUtilizacao;
     private String uf;
-    private DocumentoFiscal modeloDocumento;
+    private String modeloDocumento;
     private String serieDocumento;
     private String subSerieDocumento;
     private Integer numeroDocumento;
@@ -107,11 +107,11 @@ public class Registro70 {
         this.uf = uf;
     }
 
-    public DocumentoFiscal getModeloDocumento() {
+    public String getModeloDocumento() {
         return modeloDocumento;
     }
 
-    public void setModeloDocumento(DocumentoFiscal modeloDocumento) {
+    public void setModeloDocumento(String modeloDocumento) {
         this.modeloDocumento = modeloDocumento;
     }
 
