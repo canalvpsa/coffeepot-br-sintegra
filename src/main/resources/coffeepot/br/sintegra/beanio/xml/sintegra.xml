@@ -267,6 +267,20 @@
             <field name="baseCalculoIcmsST" typeHandler="doubleScale2Handler" length="13" justify="right" padding="0"/>
         </record>   
         
+        <record name="registro88SME" minOccurs="0" maxOccurs="1" class="coffeepot.br.sintegra.registros.Registro88SME">
+            <field name="recordType" rid="true" literal="88SME" ignore="true"/>
+            <field name="cnpj" typeHandler="stringNumberOnlyHandler" length="14" justify="right" padding="0"/>
+            <field name="mensagem" type="string" length="34" justify="left" padding=" "/>
+            <field name="spacer" type="string" length="73" literal=" " ignore="true" padding=" "/>
+        </record>
+        
+        <record name="registro88SMS" minOccurs="0" maxOccurs="1" class="coffeepot.br.sintegra.registros.Registro88SMS">
+            <field name="recordType" rid="true" literal="88SMS" ignore="true"/>
+            <field name="cnpj" typeHandler="stringNumberOnlyHandler" length="14" justify="right" padding="0"/>
+            <field name="mensagem" type="string" length="34" justify="left" padding=" "/>
+            <field name="spacer" type="string" length="73" literal=" " ignore="true" padding=" "/>
+        </record>
+        
         <record name="registro5o90" minOccurs="0" maxOccurs="unbounded" class="coffeepot.br.sintegra.registros.Registro90">
             <field name="recordType" rid="true" literal="90" ignore="true"/> 
             <field name="cnpj" typeHandler="stringNumberOnlyHandler" length="14" justify="right" padding="0"/>

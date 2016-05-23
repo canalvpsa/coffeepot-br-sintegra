@@ -58,6 +58,8 @@ import java.util.Set;
     @Field(name = "registros71"),
     @Field(name = "registros74"),
     @Field(name = "registros75"),
+    @Field(name = "registro88SME"),
+    @Field(name = "registro88SMS"),
     //TODO: Mapear classes dos registros 76 ao 88.
     //    @Field(name = "registros76"),
     //    @Field(name = "registros77"),
@@ -100,6 +102,8 @@ public class Sintegra {
     private List<Registro86> registros86;
     private Registro88EC registro88EC;
     private Registro88SF registro88SF;
+    private Registro88SME registro88SME;
+    private Registro88SMS registro88SMS;
     private List<Registro88C> registros88C;
     private List<Registro88D> registros88D;
     private List<Registro88E> registros88E;
@@ -225,6 +229,17 @@ public class Sintegra {
 
         if (r61 > 0)
         totalizadores.put("61", r61);
+        
+        int r88=0;
+        if (registro88SME != null) {
+            r88 += 1;
+        }
+        if (registro88SMS != null) {
+            r88 += 1;
+        }
+
+        if (r88 > 0)
+        totalizadores.put("88", r88);
         
         if (registros70 != null && registros70.size() > 0) {
             totalizadores.put("70", registros70.size());
@@ -733,6 +748,26 @@ public class Sintegra {
     public void setRegistros88T(List<Registro88T> registros88T) {
         this.registros88T = registros88T;
     }
+    
+    public Registro88SME getRegistro88SME() {
+
+		return registro88SME;
+	}
+
+	public void setRegistro88SME(Registro88SME registro88sme) {
+
+		registro88SME = registro88sme;
+	}
+
+	public Registro88SMS getRegistro88SMS() {
+
+		return registro88SMS;
+	}
+
+	public void setRegistro88SMS(Registro88SMS registro88sms) {
+
+		registro88SMS = registro88sms;
+	}
 
     public List<Registro88SP02> getRegistros88SP02() {
         return registros88SP02;
@@ -774,4 +809,6 @@ public class Sintegra {
         this.registros90 = registros90;
     }
     //</editor-fold>
+
+	
 }
